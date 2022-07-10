@@ -1,0 +1,8 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:solnce/components.git",
+  "author": "solnce <solnce.jpn@gmail.com>",
+  "license": "MIT"
+}
