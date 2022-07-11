@@ -35,11 +35,11 @@ jobs:
         env:
           TZ: Asia/Tokyo
 
-      - name: Create or Update Comment
-        uses: peter-evans/create-or-update-comment@v2.0.0
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
         with:
-          token: ${{ secrets.PAT_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          pr_number: ${{ github.event.pull_request.number }}
           body: |
             Visit the :books: **Storybook** :books: for this PR (updated for commit ${{ github.event.pull_request.head.sha }}):
             <${{ steps.storybook-url.outputs.value }}>
