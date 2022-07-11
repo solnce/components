@@ -1,12 +1,16 @@
 module.exports = {
-  "stories": [
+  stories: [
     "../components/**/*.stories.mdx",
-    "../components/**/*.stories.@(js|jsx|ts|tsx)"
+    "../components/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
   ],
-  "framework": "@storybook/react"
-}
+  framework: "@storybook/react",
+  babel: async (options) => ({
+    ...options,
+    presets: [...options.presets, "@emotion/babel-preset-css-prop"],
+  }),
+};
