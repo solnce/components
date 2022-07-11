@@ -1,5 +1,5 @@
-import React from 'react';
-import { css } from '@emotion/react';
+import React from "react";
+import { css } from "@emotion/react";
 
 type Type = {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export const Button: React.FC<Type> = ({
   onClick,
   ...props
 }) => {
-  const Tag = href ? 'a' : 'button'
+  const Tag = href ? "a" : "button";
   return (
     <Tag css={button} onClick={onClick} {...props}>
       {children}
@@ -24,7 +24,7 @@ export const Button: React.FC<Type> = ({
 const button = css`
   border: none;
   outline: none;
-  background-color: red;
+  background-color: orange;
   color: #fff;
 
   &:hover {
