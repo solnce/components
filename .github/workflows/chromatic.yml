@@ -40,7 +40,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
           pr_number: ${{ github.event.pull_request.number }}
-          body: |
+          message: |
             Visit the :books: **Storybook** :books: for this PR (updated for commit ${{ github.event.pull_request.head.sha }}):
             <${{ steps.storybook-url.outputs.value }}>
             <sub>Build URL: ${{ steps.chromatic.outputs.buildUrl }}</sub>
