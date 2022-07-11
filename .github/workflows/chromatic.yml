@@ -45,4 +45,3 @@ jobs:
             <${{ steps.storybook-url.outputs.value }}>
             <sub>Build URL: ${{ steps.chromatic.outputs.buildUrl }}</sub>
             <sub>(:fire: updated at ${{ steps.datetime.outputs.value }})</sub>
-          edit-mode: replace
