@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import { Button } from 'atoms/Button';
 
 type Type = {
   className?: string;
@@ -9,7 +8,6 @@ type Type = {
 export const Txt: React.FC<Type> = ({ className, children }) => (
   <p className={className} css={text}>
     {children}
-    <Button>hogehoge</Button>
   </p>
 );
 
