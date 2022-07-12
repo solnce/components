@@ -21,16 +21,11 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json', './.eslintrc.*'],
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'unused-imports',
-    "@emotion"
-  ],
+  plugins: ['react', '@typescript-eslint', 'unused-imports', '@emotion'],
   ignorePatterns: ['build'],
   rules: {
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ["error"],
+    '@typescript-eslint/no-use-before-define': ["error", { "functions": true, "classes": true, "variables": false }],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
@@ -63,6 +58,7 @@ module.exports = {
     ],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'react/require-default-props': 'off',
     'no-void': [
       'error',
       {

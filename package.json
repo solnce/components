@@ -25,6 +25,7 @@
     "@storybook/manager-webpack4": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "babel-loader": "^8.2.5",
@@ -38,11 +39,17 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "stylelint": "stylelint --ignore-path .gitignore \"components/**/*.+(css|ts|tsx)\"",
     "lint-fix": "eslint --cache --fix ./components && prettier --write ./components"
   },
   "eslintIgnore": [
