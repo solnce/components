@@ -1,0 +1,2 @@
+atoms: 'components/atoms/**/*'
+molecules: 'components/molecules/**/*'
