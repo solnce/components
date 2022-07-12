@@ -1,5 +1,4 @@
-import React from "react";
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 type Type = {
   children: React.ReactNode;
@@ -7,15 +6,11 @@ type Type = {
   onClick?: () => void;
 };
 
-export const Button: React.FC<Type> = ({
-  children,
-  href,
-  onClick,
-  ...props
-}) => {
-  const Tag = href ? "a" : "button";
+export const Button: React.FC<Type> = ({ children, href = '', onClick = () => {} }) => {
+  const Tag = href ? 'a' : 'button';
+
   return (
-    <Tag css={button} onClick={onClick} {...props}>
+    <Tag css={button} onClick={onClick}>
       {children}
     </Tag>
   );
