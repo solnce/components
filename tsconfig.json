@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es2016",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
@@ -9,7 +10,8 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "atoms/*": ["./components/atoms/*"]
+      "@atoms/*": ["./components/atoms/*"],
+      "@styles": ["./components/const/styles.ts"],
     },
   }
 }

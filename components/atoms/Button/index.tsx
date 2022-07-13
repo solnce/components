@@ -1,6 +1,8 @@
 import { css } from '@emotion/react';
+import { colors } from '@styles';
 
 type Type = {
+  className?: string;
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
@@ -20,7 +22,7 @@ const button = css`
   border: none;
   outline: none;
   background-color: orange;
-  color: #fff;
+  color: ${colors.white};
 
   &:hover {
     opacity: 0.5;
