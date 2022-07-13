@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es2016",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
