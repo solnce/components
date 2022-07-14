@@ -40,4 +40,4 @@ jobs:
         uses: ziishaned/jest-reporter-action@v0.0.1
         with:
           github-token: ${{ secrets.PAT_TOKEN }}
-          test-command: "yarn test --coverage"
+          test-command: "yarn jest --coverage"
