@@ -13,16 +13,16 @@ describe('<Txt />', () => {
   describe('prop: children', () => {
     test('should render children text', () => {
       const children = 'child';
-      const {container} = render(<Txt>{children}</Txt>);
+      const { container } = render(<Txt>{children}</Txt>);
 
-      expect(container.querySelector("p")).toHaveTextContent('child');
+      expect(container.querySelector('p')).toHaveTextContent('child');
     });
 
     test('should render children, ', () => {
       const children = <span data-testid="child" />;
-      const {container} = render(<Txt>{children}</Txt>);
+      const { container } = render(<Txt>{children}</Txt>);
 
-      expect(container.querySelector("p")).toContainElement(screen.getByTestId('child'));
+      expect(container.querySelector('p')).toContainElement(screen.getByTestId('child'));
     });
   });
 });

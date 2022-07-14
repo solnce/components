@@ -14,13 +14,13 @@ describe('<CheckBox />', () => {
     test('should render checked checkbox', () => {
       const { container } = render(<CheckBox checked />);
 
-      expect(container.querySelector("input[type=check]")).toHaveAttribute('checked');
+      expect(container.querySelector('input[type=check]')).toHaveAttribute('checked');
     });
 
     test('should render unchecked checkbox', () => {
       const { container } = render(<CheckBox />);
 
-      expect(container.querySelector("input[type=check]")).not.toHaveAttribute('checked');
+      expect(container.querySelector('input[type=check]')).not.toHaveAttribute('checked');
     });
   });
 });

@@ -12,17 +12,17 @@ describe('<Button />', () => {
 
   describe('prop: children', () => {
     test('should render children text', () => {
-      const children = "child";
-      const {container} = render(<Button>{children}</Button>);
+      const children = 'child';
+      const { container } = render(<Button>{children}</Button>);
 
-      expect(container.querySelector("button")).toHaveTextContent('child');
+      expect(container.querySelector('button')).toHaveTextContent('child');
     });
 
     test('should render children, ', () => {
       const children = <div data-testid="child" />;
-      const {container} = render(<Button>{children}</Button>);
+      const { container } = render(<Button>{children}</Button>);
 
-      expect(container.querySelector("button")).toContainElement(screen.getByTestId('child'));
+      expect(container.querySelector('button')).toContainElement(screen.getByTestId('child'));
     });
   });
 
@@ -30,18 +30,18 @@ describe('<Button />', () => {
     test('should render anchor link tag', () => {
       const { container } = render(<Button href="#test">text</Button>);
 
-      expect(container.querySelector("a")).toBeInTheDocument();
-      expect(container.querySelector("a")).toHaveAttribute('href');
+      expect(container.querySelector('a')).toBeInTheDocument();
+      expect(container.querySelector('a')).toHaveAttribute('href');
 
-      expect(container.querySelector("button")).not.toBeInTheDocument();
+      expect(container.querySelector('button')).not.toBeInTheDocument();
     });
 
     test('should render button tag', () => {
       const { container } = render(<Button>text</Button>);
 
-      expect(container.querySelector("button")).toBeInTheDocument();
+      expect(container.querySelector('button')).toBeInTheDocument();
 
-      expect(container.querySelector("a")).not.toBeInTheDocument();
+      expect(container.querySelector('a')).not.toBeInTheDocument();
     });
   });
 });
