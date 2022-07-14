@@ -2,3 +2,4 @@
 /.cache
 /.eslintcache
 /build-storybook.log
+/coverage
