@@ -12,7 +12,8 @@ export const Button: React.FC<Type> = ({ className = '', children, href = '', on
   const Tag = href ? 'a' : 'button';
 
   return (
-    <Tag className={className} href={href} css={button} onClick={onClick}>
+    <Tag
+    className={className} href={href} css={button} onClick={onClick}>
       {children}
     </Tag>
   );
