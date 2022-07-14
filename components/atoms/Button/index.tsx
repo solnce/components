@@ -8,11 +8,11 @@ type Type = {
   onClick?: () => void;
 };
 
-export const Button: React.FC<Type> = ({ children, href = '', onClick = () => {} }) => {
+export const Button: React.FC<Type> = ({ className = '', children, href = '', onClick = () => {} }) => {
   const Tag = href ? 'a' : 'button';
 
   return (
-    <Tag css={button} onClick={onClick}>
+    <Tag className={className} href={href} css={button} onClick={onClick}>
       {children}
     </Tag>
   );
