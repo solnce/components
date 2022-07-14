@@ -31,7 +31,7 @@ jobs:
         run: yarn test --coverage
 
       - name: Upload test coverage artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: coverage
           path: coverage
