@@ -27,6 +27,7 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@testing-library/jest-dom": "^5.16.4",
     "@types/jest": "^28.1.5",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
@@ -83,6 +84,7 @@
       "^@atoms/(.*)": "<rootDir>/components/atoms/$1",
       "^@styles$": "<rootDir>/components/const/styles.ts"
     },
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/jest.setup.ts"]
   }
 }

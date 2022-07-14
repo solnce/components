@@ -13,5 +13,12 @@
       "@atoms/*": ["./components/atoms/*"],
       "@styles": ["./components/const/styles.ts"],
     },
-  }
+  },
+  "include": [
+    "components/**/*",
+    "jest.setup.ts"
+  ],
+  "exclude": [
+    "node_modues"
+  ]
 }
