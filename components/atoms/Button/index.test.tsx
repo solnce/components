@@ -6,7 +6,7 @@ describe('<Button />', () => {
     test('should have className', () => {
       const { container } = render(<Button className="test">text</Button>);
 
-      expect(container.querySelector('.test')).toBeInTheDocument();
+      expect(container.querySelector('button')).toHaveClass('test');
     });
   });
 
@@ -29,13 +29,18 @@ describe('<Button />', () => {
   describe('prop: href', () => {
     test('should render anchor link tag', () => {
       const { container } = render(<Button href="#test">text</Button>);
+
       expect(container.querySelector("a")).toBeInTheDocument();
+      expect(container.querySelector("a")).toHaveAttribute('href');
+
       expect(container.querySelector("button")).not.toBeInTheDocument();
     });
 
     test('should render button tag', () => {
       const { container } = render(<Button>text</Button>);
+
       expect(container.querySelector("button")).toBeInTheDocument();
+
       expect(container.querySelector("a")).not.toBeInTheDocument();
     });
   });
