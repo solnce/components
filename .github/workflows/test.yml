@@ -1,4 +1,4 @@
-name: CI
+name: "Test and Lint"
 
 on: push
 
@@ -7,7 +7,6 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
       - uses: actions/checkout@v1
 
       - name: setup Node.js
