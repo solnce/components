@@ -1,0 +1,43 @@
+name: "Test and Lint"
+
+on: push
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: setup Node.js
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: eslint review
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          reporter: github-pr-review
+          eslint_flags: './**/*.{ts,tsx,js,jsx}'
+
+      - name: Run eslint
+        run: yarn lint
+
+      - name: Run Jest
+        run: yarn test --coverage
+
+      - name: Upload test coverage artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: coverage
+
+      - name: Show coverage in comments
+        uses: ziishaned/jest-reporter-action@v0.0.1
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
+          test-command: "yarn test --coverage"
