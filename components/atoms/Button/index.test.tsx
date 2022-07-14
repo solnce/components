@@ -13,13 +13,13 @@ describe('<Button />', () => {
   describe('prop: children', () => {
     test('should render children text', () => {
       const children = "child";
-      render(<Button>{children}</Button>);
+      const {container} = render(<Button>{children}</Button>);
 
-      expect(screen.getByText('child')).toBeInTheDocument();
+      expect(container.querySelector("button")).toHaveTextContent('child');
     });
 
     test('should render children, ', () => {
-      const children = <div data-testid="child" />
+      const children = <div data-testid="child" />;
       const {container} = render(<Button>{children}</Button>);
 
       expect(container.querySelector("button")).toContainElement(screen.getByTestId('child'));
