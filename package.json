@@ -98,9 +98,11 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "prettier --write './components'",
-      "eslint --cache --fix './components'"
-    ]
+    "linters": {
+      "*.{ts,tsx,js,jsx}": [
+        "prettier --write './components'",
+        "eslint --cache --fix './components'"
+      ]
+    }
   }
 }
