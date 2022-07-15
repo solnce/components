@@ -1,6 +1,6 @@
 {
-  "name": "components",
-  "version": "1.0.0",
+  "name": "@solnce/components",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:solnce/components.git",
   "author": "solnce <solnce.jpn@gmail.com>",
@@ -62,11 +62,13 @@
     "trim": "^0.0.3"
   },
   "scripts": {
+    "build": "tsc --project ./tsconfig.build.json",
+    "check-types": "tsc --project ./tsconfig.json --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "stylelint": "stylelint --ignore-path .gitignore \"components/**/*.+(css|ts|tsx)\"",
-    "lint-fix": "eslint --cache --fix ./components && prettier --write ./components",
-    "lint": "eslint --cache ./components",
+    "lint-fix": "eslint --cache --fix ./src/components && prettier --write ./src/components",
+    "lint": "eslint --cache ./src/components",
     "secretlint": "secretlint '**/*'",
     "test": "jest"
   },
@@ -90,8 +92,8 @@
       "tsx"
     ],
     "moduleNameMapper": {
-      "^@atoms/(.*)": "<rootDir>/components/atoms/$1",
-      "^@styles$": "<rootDir>/components/const/styles.ts"
+      "^@atoms/(.*)": "<rootDir>/src/components/atoms/$1",
+      "^@styles$": "<rootDir>/src/components/const/styles.ts"
     },
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
@@ -105,8 +107,8 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
-      "prettier --write './components'",
-      "eslint --cache --fix './components'"
+      "prettier --write './src/components'",
+      "eslint --cache --fix './src/components'"
     ]
   }
 }
