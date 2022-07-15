@@ -98,11 +98,9 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.{ts,tsx,js,jsx}": [
+      "**/*.{ts,tsx,js,jsx}": [
         "prettier --write './components'",
         "eslint --cache --fix './components'"
       ]
-    }
   }
 }
