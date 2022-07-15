@@ -10,6 +10,7 @@ type Type = {
 
 export const Button: React.FC<Type> = ({ className = '', children, href = '', onClick = () => {} }) => {
   const Tag = href ? 'a' : 'button';
+  console.log('Tag', Tag);
 
   return (
     <Tag className={className} href={href} css={button} onClick={onClick}>
