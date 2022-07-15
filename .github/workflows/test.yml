@@ -1,6 +1,9 @@
 name: "Test and Lint"
 
-on: push
+on:
+  push:
+    branches: [ main ]
+  pull_request:
 
 jobs:
   build:
@@ -20,7 +23,7 @@ jobs:
       - name: eslint review
         uses: reviewdog/action-eslint@v1
         with:
-          github_token: ${{ secrets.PAT_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           eslint_flags: './**/*.{ts,tsx,js,jsx}'
 
@@ -30,14 +33,9 @@ jobs:
       - name: Run Jest
         run: yarn test --coverage
 
-      - name: Upload test coverage artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage
-          path: coverage
-
       - name: Show coverage in comments
-        uses: ziishaned/jest-reporter-action@v0.0.1
+        uses: ArtiomTr/jest-coverage-report-action@v2
         with:
-          github-token: ${{ secrets.PAT_TOKEN }}
-          test-command: "yarn test --coverage"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          package-manager: 'yarn'
+          test-script: "yarn run test -- --coverage --silent --testLocationInResults --ci --json --outputFile=\"report.json\""
