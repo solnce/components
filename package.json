@@ -55,6 +55,12 @@
     "ts-jest": "^28.0.5",
     "tsconfig-paths-webpack-plugin": "^3.5.2"
   },
+  "resolutions": {
+    "got": "^11.8.5",
+    "trim-newlines": "^3.0.1",
+    "glob-parent": "^5.1.2",
+    "trim": "^0.0.3"
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
