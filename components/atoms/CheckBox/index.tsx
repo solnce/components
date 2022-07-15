@@ -5,6 +5,6 @@ type Type = {
   checked?: boolean;
 };
 
-export const CheckBox: React.FC<Type> = ({ name, className = '', onClick = () => {}, checked = false }) => (
+export const CheckBox: React.FC<Type> = ({ name, className, onClick, checked }) => (
   <input name={name} className={className} type="checkbox" onClick={onClick} defaultChecked={checked} />
 );
