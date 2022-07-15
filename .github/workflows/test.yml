@@ -23,7 +23,7 @@ jobs:
       - name: eslint review
         uses: reviewdog/action-eslint@v1
         with:
-          github_token: ${{ secrets.PAT_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           eslint_flags: './**/*.{ts,tsx,js,jsx}'
 
@@ -42,5 +42,5 @@ jobs:
       - name: Show coverage in comments
         uses: ziishaned/jest-reporter-action@v0.0.1
         with:
-          github-token: ${{ secrets.PAT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           test-command: "yarn test --coverage"
