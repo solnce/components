@@ -1,12 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Button } from '@atoms/Button';
 
 describe('<Button />', () => {
   describe('prop: className', () => {
     test('should have className', () => {
-      const { container } = render(<Button className="test">text</Button>);
+      render(<Button className="test">button</Button>);
 
-      expect(container.querySelector('button')).toHaveClass('test');
+      expect(screen.getByText('button')).toHaveClass('test');
     });
   });
 
@@ -28,10 +28,10 @@ describe('<Button />', () => {
 
   describe('prop: href', () => {
     test('should render anchor link tag', () => {
-      const { container } = render(<Button href="#test">text</Button>);
+      const { container } = render(<Button href="#test">button</Button>);
 
       expect(container.querySelector('a')).toBeInTheDocument();
-      expect(container.querySelector('a')).toHaveAttribute('href');
+      expect(screen.getByText('button')).toHaveAttribute('href');
 
       expect(container.querySelector('button')).not.toBeInTheDocument();
     });
@@ -42,6 +42,33 @@ describe('<Button />', () => {
       expect(container.querySelector('button')).toBeInTheDocument();
 
       expect(container.querySelector('a')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('prop: onClick', () => {
+    test('should fire event from anchor link tag', () => {
+      const onClick = jest.fn();
+      const { container } = render(
+        <Button href="#test" onClick={onClick}>
+          button
+        </Button>
+      );
+
+      expect(container.querySelector('a')).toBeInTheDocument();
+      expect(screen.getByText('button')).toHaveAttribute('href');
+
+      fireEvent.click(screen.getByText('button'));
+      expect(onClick).toHaveBeenCalled();
+    });
+
+    test('should fire event from button tag', () => {
+      const onClick = jest.fn();
+      const { container } = render(<Button onClick={onClick}>button</Button>);
+
+      expect(container.querySelector('button')).toBeInTheDocument();
+
+      fireEvent.click(screen.getByText('button'));
+      expect(onClick).toHaveBeenCalled();
     });
   });
 });
