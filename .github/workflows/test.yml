@@ -33,6 +33,9 @@ jobs:
       - name: Run Jest
         run: yarn test --coverage
 
+      - name: Compile Typescript
+        run: yarn check-types
+
       - name: Show coverage in comments
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
