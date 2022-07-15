@@ -1,2 +1,2 @@
-atoms: 'components/atoms/**/*'
-molecules: 'components/molecules/**/*'
+atoms: 'src/components/atoms/**/*'
+molecules: 'src/components/molecules/**/*'

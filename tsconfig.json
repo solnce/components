@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "./dist/",
     "target": "es2016",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
@@ -10,15 +11,15 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@atoms/*": ["./components/atoms/*"],
-      "@styles": ["./components/const/styles.ts"],
+      "@atoms/*": ["./src/components/atoms/*"],
+      "@styles": ["./src/components/const/styles.ts"],
     },
   },
   "include": [
-    "components/**/*",
-    "jest.setup.ts"
+    "./src/components/**/*",
+    "./jest.setup.ts"
   ],
   "exclude": [
-    "node_modues"
+    "node_modules"
   ]
 }

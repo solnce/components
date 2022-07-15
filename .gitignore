@@ -3,3 +3,4 @@
 /.eslintcache
 /build-storybook.log
 /coverage
+/dist

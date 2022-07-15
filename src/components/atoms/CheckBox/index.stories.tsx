@@ -5,4 +5,4 @@ export default {
   component: CheckBox,
 };
 
-export const Basic = () => <CheckBox />;
+export const Basic = () => <CheckBox name="checkbox" />;
