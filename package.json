@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "git@github.com:solnce/components.git",
   "engines": {"node": "^16.0.0"},
   "author": "solnce <solnce.jpn@gmail.com>",
