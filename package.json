@@ -1,17 +1,22 @@
 {
   "name": "@solnce/components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "repository": "git@github.com:solnce/components.git",
-  "engines": {"node": "^16.0.0"},
+  "engines": {
+    "node": "^16.0.0"
+  },
   "author": "solnce <solnce.jpn@gmail.com>",
   "license": "MIT",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.2.0",
@@ -61,6 +66,7 @@
     "stylelint-config-standard": "^26.0.0",
     "stylelint-prettier": "^2.0.0",
     "ts-jest": "^28.0.5",
+    "tsc-alias": "^1.6.11",
     "tsconfig-paths-webpack-plugin": "^3.5.2"
   },
   "resolutions": {
@@ -70,7 +76,7 @@
     "trim": "^0.0.3"
   },
   "scripts": {
-    "build": "tsc --project ./tsconfig.build.json",
+    "build": "tsc --project ./tsconfig.build.json && tsc-alias -p ./tsconfig.build.json",
     "check-types": "tsc --project ./tsconfig.json --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
