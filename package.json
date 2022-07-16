@@ -1,8 +1,8 @@
 {
   "name": "@solnce/components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
-  "types": "dist/main.d.ts",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:solnce/components.git",
   "engines": {"node": "^16.0.0"},
   "author": "solnce <solnce.jpn@gmail.com>",
