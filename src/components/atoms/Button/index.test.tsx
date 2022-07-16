@@ -22,7 +22,9 @@ describe('<Button />', () => {
       const children = <div data-testid="child" />;
       const { container } = render(<Button>{children}</Button>);
 
-      expect(container.querySelector('button')).toContainElement(screen.getByTestId('child'));
+      expect(container.querySelector('button')).toContainElement(
+        screen.getByTestId('child')
+      );
     });
   });
 

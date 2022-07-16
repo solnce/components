@@ -97,6 +97,7 @@
     ],
     "moduleNameMapper": {
       "^@atoms/(.*)": "<rootDir>/src/components/atoms/$1",
+      "^@molecules/(.*)": "<rootDir>/src/components/molecules/$1",
       "^@styles$": "<rootDir>/src/components/const/styles.ts"
     },
     "testEnvironment": "jsdom",

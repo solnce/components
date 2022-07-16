@@ -1,10 +1,24 @@
 type Type = {
   name: string;
+  id?: string;
   className?: string;
-  onClick?: () => void;
+  onChange?: () => void;
   checked?: boolean;
 };
 
-export const CheckBox: React.FC<Type> = ({ name, className, onClick, checked }) => (
-  <input name={name} className={className} type="checkbox" onClick={onClick} defaultChecked={checked} />
+export const CheckBox: React.FC<Type> = ({
+  name,
+  id,
+  className,
+  onChange,
+  checked,
+}) => (
+  <input
+    id={id}
+    name={name}
+    className={className}
+    type="checkbox"
+    onChange={onChange}
+    defaultChecked={checked}
+  />
 );

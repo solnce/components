@@ -6,3 +6,4 @@ export default {
 };
 
 export const Basic = () => <CheckBox name="checkbox" />;
+export const Checked = () => <CheckBox name="checkbox" checked />;

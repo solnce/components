@@ -12,6 +12,7 @@
     "skipLibCheck": true,
     "paths": {
       "@atoms/*": ["./src/components/atoms/*"],
+      "@molecules/*": ["./src/components/molecules/*"],
       "@styles": ["./src/components/const/styles.ts"],
     },
   },
