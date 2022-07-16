@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "./dist/",
+    "declaration": true,
     "target": "es2016",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
