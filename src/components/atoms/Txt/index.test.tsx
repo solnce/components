@@ -22,7 +22,9 @@ describe('<Txt />', () => {
       const children = <span data-testid="child" />;
       const { container } = render(<Txt>{children}</Txt>);
 
-      expect(container.querySelector('p')).toContainElement(screen.getByTestId('child'));
+      expect(container.querySelector('p')).toContainElement(
+        screen.getByTestId('child')
+      );
     });
   });
 });
