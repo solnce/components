@@ -19,7 +19,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/react": "^11.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
