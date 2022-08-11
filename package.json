@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
-    "@emotion/eslint-plugin": "^11.7.0",
+    "@emotion/eslint-plugin": "^11.10.0",
     "@secretlint/secretlint-rule-preset-recommend": "^5.2.3",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
