@@ -19,33 +19,33 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/react": "^11.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.7.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.9",
+    "@babel/core": "^7.18.10",
     "@emotion/eslint-plugin": "^11.10.0",
     "@secretlint/secretlint-rule-preset-recommend": "^5.2.3",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
-    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.10",
     "@storybook/manager-webpack4": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "@stylelint/postcss-css-in-js": "^0.38.0",
-    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@types/jest": "^28.1.6",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.31.0",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.7.2",
-    "eslint": "^8.20.0",
+    "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -67,7 +67,7 @@
     "stylelint-prettier": "^2.0.0",
     "ts-jest": "^28.0.7",
     "tsc-alias": "^1.7.0",
-    "tsconfig-paths-webpack-plugin": "^3.5.2"
+    "tsconfig-paths-webpack-plugin": "^4.0.0"
   },
   "resolutions": {
     "got": "^11.8.5",
