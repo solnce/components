@@ -73,6 +73,7 @@
     "got": "^11.8.5",
     "trim-newlines": "^3.0.1",
     "glob-parent": "^5.1.2",
+    "terser": "^5.14.2",
     "trim": "^0.0.3"
   },
   "scripts": {
