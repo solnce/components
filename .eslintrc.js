@@ -26,13 +26,21 @@ module.exports = {
   rules: {
     'no-console': 'error',
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error', { functions: true, classes: true, variables: false }],
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      { functions: true, classes: true, variables: false },
+    ],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
       'warn',
-      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
     ],
     'react/function-component-definition': [
       2,
@@ -66,6 +74,7 @@ module.exports = {
         allowAsStatement: true,
       },
     ],
+    'react/no-unknown-property': [0],
   },
   settings: {
     'import/resolver': {
