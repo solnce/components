@@ -26,7 +26,7 @@
     "typescript": "^4.7.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.19.1",
     "@emotion/eslint-plugin": "^11.10.0",
     "@secretlint/secretlint-rule-preset-recommend": "^5.2.3",
     "@storybook/addon-actions": "^6.5.9",
