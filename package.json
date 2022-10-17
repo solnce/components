@@ -61,7 +61,7 @@
     "prettier": "^2.7.1",
     "secretlint": "^5.2.3",
     "storybook": "^6.5.10",
-    "stylelint": "^14.12.1",
+    "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^28.0.0",
     "stylelint-prettier": "^2.0.0",
