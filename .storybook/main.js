@@ -1,7 +1,7 @@
-// const path = require('path');
 const { mergeConfig } = require('vite');
 const tsconfigPaths = require('vite-tsconfig-paths').default;
 const react = require('@vitejs/plugin-react');
+const turbosnap = require('vite-plugin-turbosnap');
 
 module.exports = {
   stories: [
@@ -25,15 +25,10 @@ module.exports = {
           jsxImportSource: '@emotion/react',
         }),
         tsconfigPaths(),
+        turbosnap({ rootDir: config.root }),
       ],
     });
   },
-  // webpackFinal(config) {
-  //   config.resolve.modules = [
-  //     ...(config.resolve.modules || []),
-  //     path.resolve(__dirname, '../src/components'),
-  //   ];
-  // },
   framework: '@storybook/react',
   babel: async (options) => ({
     ...options,

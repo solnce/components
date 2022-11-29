@@ -74,7 +74,8 @@
     "stylelint-config-standard": "^28.0.0",
     "stylelint-prettier": "^2.0.0",
     "ts-jest": "^28.0.7",
-    "tsc-alias": "^1.7.0"
+    "tsc-alias": "^1.7.0",
+    "vite-plugin-turbosnap": "^1.0.1"
   },
   "resolutions": {
     "got": "^11.8.5",
