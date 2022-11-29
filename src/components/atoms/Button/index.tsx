@@ -26,7 +26,7 @@ export const Button: React.FC<Type> = ({
 const button = css`
   border: none;
   outline: none;
-  background-color: orange;
+  background-color: red;
   color: ${colors.white};
 
   &:hover {
