@@ -1,11 +1,12 @@
 {
   "name": "@solnce/components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/components.umd.js",
   "module": "dist/components.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "exports": {
     ".": {
