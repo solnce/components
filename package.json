@@ -85,6 +85,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "postinstall": "vite build",
     "check-types": "tsc --project ./tsconfig.json --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
