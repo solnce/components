@@ -34,7 +34,7 @@
     "vite-tsconfig-paths": "^3.6.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.20.12",
     "@emotion/eslint-plugin": "^11.10.0",
     "@secretlint/secretlint-rule-preset-recommend": "^5.2.3",
     "@storybook/addon-actions": "^6.5.9",
