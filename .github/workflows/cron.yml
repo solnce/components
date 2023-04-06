@@ -11,3 +11,11 @@ jobs:
     steps:
       - name: test echo
         run: echo "Hello world"
+      - name: push
+        run: |
+          git config --global user.email ${GIT_USER_EMAIL}
+          git config --global user.name ${GIT_USER_NAME}
+          git add .
+          git commit -m "generate code for data-aggregator-typescript-axios" --allow-empty
+          git pull --rebase
+          git push
