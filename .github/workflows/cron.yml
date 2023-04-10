@@ -1,0 +1,27 @@
+name: Scheduled test
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+env:
+  GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+  GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: test echo
+        run: echo "Hello world"
+      - name: push
+        run: |
+          git config --global user.email ${GIT_USER_EMAIL}
+          git config --global user.name ${GIT_USER_NAME}
+          git add .
+          git commit -m "generate code for data-aggregator-typescript-axios" --allow-empty
+          git pull --rebase
+          git push
